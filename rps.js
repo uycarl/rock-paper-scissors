@@ -1,3 +1,8 @@
+let humanScore = 0;
+let computerScore = 0;
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
 function getComputerChoice(){
     let choices = Math.floor(Math.random() * 3) + 1;
     if(choices === 1){
@@ -10,9 +15,15 @@ function getComputerChoice(){
     return choices;
 }
 
-console.log(getComputerChoice());
+console.log("Computer selects:", getComputerChoice());
 
 function getHumanChoice(){
-    
+    let getChoice = prompt("Rock, Paper or Scissor");
+    return getChoice;
 }
 
+function playRound(humanChoice, computerChoice) {
+    // your code here!
+}
+
+playRound(humanSelection, computerSelection);
