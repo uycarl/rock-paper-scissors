@@ -14,13 +14,16 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    // let rpsChoice = prompt("Rock, Paper or Scissor");
-    // let rpsLowerCase = rpsChoice.toLowerCase();
-    // if(rpsLowerCase !== "rock" || rpsLowerCase !== "paper" || rpsLowerCase !== "scissors"){
-
-    // }
-  return prompt("Rock, Paper or Scissor");
+    let rpsChoice = prompt("Rock, Paper or Scissors");
+    let rpsLowerCase = rpsChoice.toLowerCase();
+    if(rpsLowerCase !== 'rock' && rpsLowerCase !== 'paper' && rpsLowerCase !== 'scissors'){
+        return prompt("Please enter either Rock, Paper or Scissors");
+    } else {
+        return rpsChoice;
+    }
 }
+
+// getHumanChoice()
 
 function playRound(humanChoice, computerChoice) {
   let humanLowerCase = humanChoice.toLowerCase();
